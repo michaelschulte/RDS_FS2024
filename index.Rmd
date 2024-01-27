@@ -1,0 +1,50 @@
+---
+title: "Datascience mit R"
+subtitle: "<font style='font-color = white'>420257, Stand: `r paste(Sys.Date())`</font>"
+date:  " <img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style= 'height:14.7px;vertical-align:baseline'/>"
+author: "<font style='font-style:normal;font-size:20px;padding-left:9.3px'>FS 2024</font>"
+output:
+  html_document:
+    css: index.css
+    self_contained: no
+---
+
+```{r setup, include=FALSE}
+source("_sessions/baselink.R")
+```
+
+# Der Plan
+
+|Datum|Thema|Input|Practicals|
+|:--:|:-|:--:|:--:|
+|21.02.| Willkommen! | [slides](_sessions/Welcome/Welcome.html) | | 
+|      | Einführung R | [slides](_sessions/IntroToR/IntroToR.html) | [source](_sessions/IntroToR/IntroToR_interactive.R) |
+|      | Data | [slides](_sessions/Data/Data.html) | [practical1](_sessions/Data/Data_practical.html)<!--, [solutions](_sessions/Data/Data_practical_solutions.html)-->|
+|28.02.| Recap | | | 
+|| Wrangling I | [slides](_sessions/Wrangling/Wrangling.html)|[practical2](_sessions/Wrangling/Wrangling_practical.html)<!--, [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)-->|  
+|      | Wrangling II | [slides](_sessions/WranglingII/WranglingII.html) | [practical3](_sessions/WranglingII/WranglingII_practical.html)<!--, [solutions](_sessions/WranglingII/WranglingII_practical_solutions.html)-->|
+|06.03.| Recap | | | 
+|| Plotting I | [slides](_sessions/PlottingI/PlottingI.html) | [practical4](_sessions/PlottingI/PlottingI_practicaI.html)<!--, [solutions](_sessions/PlottingI/PlottingI_practicaI_solutions.html)-->
+|| Plotting II | [slides](_sessions/PlottingII/PlottingII.html) | [practical5](_sessions/PlottingII/PlottingII_practical.html)<!--, [solutions](_sessions/PlottingII/PlottingII_practical_solutions.html)-->|
+|13.03.| Recap | | | 
+|| Plotting III + Competition |[slides](_sessions/PlottingIII/PlottingIII.html)|<!--[Competition](_sessions/PlottingIII/Competition.html)-->| |
+||Intro Finales Projekt||<!--[Avocado](_sessions/Project/Final.html)-->||
+|20.03.| Lineare Modelle |[slides](_sessions/LinearModelsI/LinearModelsI.html)| [practical6](_sessions/LinearModelsI/LinearModelsI_practical.html)<!--, [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)-->| |
+|| Reporting | [slides](_sessions/Reporting/Reporting.html)| [practical7](_sessions/Reporting/Reporting_practical.html)<!--, [solutions](_sessions/Reporting/Reporting_practical_solutions.html)-->||
+|| Evaluation | <!--[Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=LT1PR)-->|||
+|10.04.| Recap | | | 
+|| Projektpräsentationen |<!--[Next steps](_sessions/NextSteps/NextSteps.html) -->| <!--[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://ilias.unibe.ch/goto_ilias3_unibe_file_2447103_download.html)-->| 
+
+# Downloads
+
+[Installation](installation.html)
+
+[Project + Datasets](`r noquote(baselink)`_materials/RDS_Project.zip)
+
+# Practicals
+
+Upload bitte in der Form: Name_Practical_#.zip (zB Schulte_Practical_1.zip) spätestens bis Dienstag 12.00 Uhr Mittag, vor dem nächsten Termin!
+
+Practicals sollen immer alle nötigen Daten, .RProject File und Code beinhalten und problemlos laufen! Am Besten das ganze Projekt Directory als .zip Datei hochladen. Bitte auf Benamung achten!
+
+<h2>[Practical Upload](https://www.dropbox.com/request/H8dN3B8vm81zifcTjovP)</h2>

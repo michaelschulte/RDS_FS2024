@@ -1,0 +1,409 @@
+---
+title: "Reporting"
+output:
+  xaringan::moon_reader:
+    css: ["default", "baselrbootcamp.css"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+    pandoc_args: '../_header.yaml'
+    includes:
+      before_body: '../_before.html'
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+# see: https://github.com/yihui/xaringan
+# install.packages("xaringan")
+# see: 
+# https://github.com/yihui/xaringan/wiki
+# https://github.com/gnab/remark/wiki/Markdown
+options(width=110)
+options(digits = 4)
+source("../baselink.R")
+```
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(comment=NA, fig.width=6, fig.height=6, echo = TRUE, eval = TRUE, message = FALSE, warning = FALSE, fig.align = 'center')
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(knitr)
+baselers <-  read_csv('1_Data/basel.csv')
+```
+---
+<br><br>
+
+> # Wie transferiert man Daten aus der Analyse in einen Report?
+
+---
+
+# Dokument (copy-paste) Workflow
+```{r, echo = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/unreproducible_workflow.png")
+```
+
+
+---
+.pull-left55[
+
+# Wo liegt hier das Problem?
+ 
+Viele Möglichkeiten für <high>menschliche Fehler</high> beim Kopieren.
+
+> War der p-Wert .07 oder 0.70?
+
+Es gibt so <high>keine Dokumentation</high> wie eine Analyse abgelaufen ist.
+
+> Wie haben wir diese Analyse genau gemacht?
+
+<high>Langsam</high> 
+
+> Es gibt neue Daten - ganze Analyse erneurt durchführen?
+
+## Lösung: <high>Dynamische Berichte.</high>
+
+]
+
+.pull-right45[
+<br><br><br><br><br><br>
+
+```{r, echo = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/unreproducible_workflow.png")
+```
+
+]
+
+---
+
+## Dynamische Berichte
+
+In einem <high>dynamischen Bericht</high> wird das Output automatisch aus der Kombination des Codes + der Daten + Grafiken und Text erstellt.
+
+```{r, echo = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/DynamicReports_ProcessHorizontal.png")
+```
+
+---
+
+.pull-left55[
+
+## Warum sind dynamische Berichte grossartig?
+
+<br>
+<high>Genau</high>
+
+- Keine Transferfehler zwischen R-Ouput und finalem Dokument.
+- R-Code ist immer exakt gleich, wie das finale Dokument.
+
+<high>Reproduzierbar</high>
+
+- Alle Analyseschritte sind in einem Stück Code enthalten, das offen gelegt werden kann.
+- Daten + Transformationen + Aggregationen ... sind direkt mit dem finalen Dokument verbunden.
+
+<high>Effizient</high>
+
+- Für einen neuen Datensatz, ist eine neue Analyse mit einem Click möglich.
+
+]
+
+.pull-right45[
+
+```{r, echo = FALSE, out.width = "80%"}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/DynamicReports_ProcessVertical.png")
+```
+
+]
+
+
+---
+.pull-left45[
+
+## Ausgabeformate für dynamische Berichte
+
+
+<br><br>
+
+|  | |
+|:------|:------|
+|Web (HTML) pages |[Websites from Markdown](http://rmarkdown.rstudio.com/rmarkdown_websites.html) |
+|PDF documents | [PDFs from Markdown](http://rmarkdown.rstudio.com/pdf_document_format.html) |
+|Slideshows | [Slide Ninja from xaringan!](https://github.com/yihui/xaringan) |
+|Shiny Apps | [Dynamic web applications](https://shiny.rstudio.com/) |
+|Books | [bookdown.org](http://bookdown.org) |
+|R Packages | [Pkgdown - documentation](https://pkgdown.r-lib.org) |
+
+<br>
+### Grundlage: R Markdown
+
+
+]
+
+.pull-right45[
+
+
+```{r, echo = FALSE, out.width="100%", fig.align = 'center'}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/RMarkdownOutputFormats.png")
+```
+
+]
+
+---
+
+## Was ist Markdown (.md)?
+
+Markdown ist eine einfache Markup <high>Sprache</high>, die es erlaubt Text mit speziellen <high>Tags</high> zu versehen un in formatiertes Output zu übersetzen.
+
+```{r, echo = FALSE, out.width = "90%"}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/DynamicReports_BasicMarkdown.png")
+```
+
+
+
+---
+
+## Was ist RMarkdown (.Rmd)?
+
+<high>RMarkdown</high> ist eine Kombination aus <high>markdown</high> und <high>R Code</high>
+
+
+```{r, echo = FALSE, out.width = "90%"}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/DynamicReports_BasicRMarkdown.png")
+```
+
+
+---
+
+## Wie erstelle ich eine RMarkdown Dokument
+
+```{r, echo = FALSE, out.width="80%", fig.align = 'center'}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/openmarkdown.png")
+```
+
+
+---
+
+.pull-left4[
+
+## Code Chunks in RMarkdown
+
+R Code wird in speziellen <high>Code Chunks</high> in ein Dokument eingefügt.
+
+Alles innerhalb eines Chunks wird als R-Code verarbeitet wenn das dokument "geknitted" wird.
+
+Jeder Chunk kann Argumente haben
+
+
+|Argument| Beschreibung|
+|:-----|:------|
+|`eval` |Soll der Code evaluiert werden? |
+|`echo` |Soll der Code gezeigt werden? |
+|`fig.width, fig.height`| Grösse von Grafiken|
+
+
+Chunk Optionen sind [hier](https://yihui.name/knitr/options/) dokumentiert (Yihui's Seite) 
+
+]
+
+.pull-right55[
+
+```{r, echo = FALSE, out.width="90%", fig.align = 'center'}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/chunkoptions.png")
+```
+
+
+]
+
+---
+
+# Inline Chunks
+
+R Code kann auch direkt im Text, als *Inline Chunk* eingefügt werden.
+
+<br>
+<br>
+
+```{r, echo = FALSE, fig.cap = "", out.width = "80%"}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/minichunk_ss_D.png")
+```
+
+---
+
+# Inline Chunks
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/minichunk_big_ss.png")
+```
+
+---
+
+.pull-left45[
+
+## Code soll tidy sein
+
+Installation von Pakete oder aufwändige Berechnungen sollten vermieden werden.
+
+```{r, echo = FALSE, out.width="100%", fig.align = 'center'}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/DynamicReports_BadMarkdown.png")
+```
+
+]
+
+.pull-right45[
+<br><br>
+
+Kommentare, wie in regulärem R, mit #
+
+```{r, echo = FALSE, out.width="100%", fig.align = 'center'}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/DynamicReports_GoodMarkdown.png")
+```
+
+]
+
+---
+
+.pull-left45[
+
+## Ausgabe mit `knitr` erzeugen
+
+```{r, out.width = "30%", echo = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/knitr_hex.png")
+```
+
+Bilder und Tabellen müssen extra gerendert werden - dafür gibt es viele Funktionen aus dem <high>knitr</high> Paket.
+
+```{r}
+# Load the knitr package
+library(knitr)
+```
+
+
+| Funktion|Output|
+|:------|:----|
+|     `kable(df, format)`|Dataframe als Tabelle ausgeben|
+|     `include_graphics(path)`| Bild einfügen (z.B. .png, .jpg)|
+
+]
+
+.pull-right5[
+<br><br>
+Tabelle mit <high>kable()</high> rendern.
+
+```{r, echo = TRUE, eval = FALSE, results = 'asis'}
+kable(x = baselers,  # A data frame
+      format = 'markdown')
+```
+
+```{r, echo = FALSE, eval = TRUE, results = 'asis'}
+kable(x = baselers %>% slice(1:3) %>% select(1:6),
+      format = 'markdown')
+```
+
+
+Bild mit <high>include_graphics()</high> einfügen
+
+```{r, echo = TRUE, out.width = "15%", eval = FALSE}
+include_graphics(path = "images/rlogo.png")
+```
+
+```{r, echo = FALSE, out.width = "30%", fig.align = 'center', fig.width = 10}
+include_graphics(path = "https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/rlogo.png")
+```
+
+]
+
+
+---
+
+## Tabellen
+
+
+Die `datatable()` Funktion aus dem `DT` Paket erstellt HTML Tabellen aus R Code. Siehe [rstudio.github.io/DT/options.html](https://rstudio.github.io/DT/options.html) 
+
+```{r}
+library(DT)
+
+datatable(baselers %>% 
+          select(id, geschlecht, alter, groesse, gewicht, einkommen), # Only these columns
+          options = list(pageLength = 4))               # 4 Rows at a time please
+```
+
+---
+
+
+.pull-left4[
+
+## Output Formate
+
+Es gibt eine grosse Anzahl Output Formate für RMarkdown Dokumente.
+
+
+| Paket|Beschreibung|
+|:------|:----|
+|     `xaringan`*| Präsentationen|
+|     `papaja`*|APA Manuskript|
+|     `rmdformats`|Vorlagen|
+|     `prettydoc`|Projekt Dokumentation|
+
+`* = GitHub
+
+]
+
+.pull-right55[
+<br>
+### R Markdown Vorlagen in R Studio
+
+```{r, echo = FALSE, out.width="100%", fig.align = 'center'}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/rmarkdown_templates.png")
+```
+
+]
+
+
+---
+
+## R Markdown Gallery
+
+Überblick über verfügbare Formate: http://rmarkdown.rstudio.com/gallery.html
+
+<iframe src="rmarkdown_gallery.htm" width="800" height="450"></iframe>
+
+
+---
+
+.pull-left6[
+
+## Vorteile dynamischer Berichte
+
+1. <high>Tidy!</high> Daten, Code und Ausgabe sind in einer Datei.
+
+2. Ergebnisse sind <high>reproduzierbar</high>!
+
+3. Elegante Dokumente können als PDF, Webpage oder als Präsentation erstellt werden.
+
+4. Die Analyse neuer Daten ist nur <high>einen Click</high> weit weg.
+
+
+```{r, echo = FALSE, out.width="50%", fig.align = 'center'}
+knitr::include_graphics("https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/RMarkdownOutputFormats.png")
+```
+
+]
+
+.pull-right35[
+
+<br>
+<center><a href="https://bookdown.org/yihui/rmarkdown/"><img src="https://bookdown.org/yihui/rmarkdown/images/cover.png" width="250"></a>
+
+[Yihui Xie's free R Markdown guide](https://bookdown.org/yihui/rmarkdown/)
+]
+
+---
+
+class: middle, center
+
+<h1><a href="`r noquote(baselink)`index.html">Agenda</a></h1>
+

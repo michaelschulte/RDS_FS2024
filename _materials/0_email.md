@@ -1,0 +1,12 @@
+carina.greussing@students.unibe.ch;
+david.forman@students.unibe.ch;
+christoph.berger@students.unibe.ch;
+lukas.schacher@students.unibe.ch;
+vera.kaufmann@students.unibe.ch;
+vera.furrer@students.unibe.ch;
+pawel.greter@students.unibe.ch;
+leandro.zumstein@students.unibe.ch;
+peter.winkelmann@students.unibe.ch;
+lisa.vanderfloe@students.unibe.ch;
+andy.ritz@students.unibe.ch;
+thomas.leibundgut@students.unibe.ch;
