@@ -1,1 +1,1 @@
-baselink <- 'https://rds-fs2022.netlify.app/'
+baselink <- 'https://rds-fs2024.netlify.app/'
