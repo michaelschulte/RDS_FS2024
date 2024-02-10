@@ -28,7 +28,7 @@ source("../baselink.R")
 <br><br><br><br><br>
 #  Agenda und Materialien
 
-Klicke auf <high>"Start Bootcamp"</high> auf Ilias!
+Klicke auf <high>"Start Datascience mit R"</high> auf Ilias!
 
 ]
 
@@ -200,7 +200,7 @@ Chief Decision Scientist at Google
   <br><br>
   <ul class="level">
     <li><span>20 - 50 Aufgaben</span></li>
-    <li><span>Zu Beginn einfach dann zunehmend schwieriger.</span></li>
+    <li><span>Zu Beginn einfach, dann zunehmend schwieriger.</span></li>
     <li><span>Folgt Eurem eigenen Tempo.</span></li>
     <li><span>Antworten kommen später.</span></li>
   </ul>
@@ -268,7 +268,7 @@ Chief Decision Scientist at Google
   <li class="m1"><span>Macht <high>jederzeit</high> Pausen.</span></li>
   <li class="m2"><span>Programmieren braucht [Kaffee|Tee|Wasser].</span></li>
   <li class="m3"><span>Mich gerne daran <high>erinnern</high>, dass eine Pause gut wäre!</span></li>
-  <li class="m4"><span>Eine fixe 20-Minuten Pause in der Mitte des Nachmittages</li>
+  <li class="m4"><span>Eine fixe 20-Minuten Pause in der Mitte des Nachmittages.</li>
   
 </ul>
 
