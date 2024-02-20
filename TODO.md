@@ -1,8 +1,5 @@
 # Pre-Course
 
-- installation.html link anpassen
-- index.Rmd installation + Project file link anpasssen
-
 # Session 1
 - shorten Intro to R 10 steps
 

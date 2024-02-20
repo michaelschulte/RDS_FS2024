@@ -689,7 +689,7 @@ library(haven)
 |:------|:--------|
 | `mean(x), median(x), sd(x), sum(x)` | Mittelwert, Median, Standardabweichung, Summe|
 | `max(x), min(x)`                    | Maximum, Minimum|
-| `table(x)`                          | Höufigkeitstabelle|
+| `table(x)`                          | Häufigkeitstabelle|
 
 *Zugriff auf Variablen in Data Frames*
 
