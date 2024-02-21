@@ -20,7 +20,8 @@ Bootcamp_package_installation <- function() {
     "xml2",
     "kableExtra",
     "lubridate",
-    "readxl"
+    "readxl",
+    "haven"
     
   )
   
