@@ -555,7 +555,7 @@ appointments_weather <- appointments %>%
 
 9. Printe `appointments_weather`. Ist alles in Ordnung?
 
-10. Erstelle im nächsten Schritt der Pipeline erneut eine Variable `termin_eingelten_01` genauso wie du das vorher bereits einmal gemacht hast. Erstelle ausserdem eine Variable `niederschlag_01` die anzeigt, ob es Niederschlag gab oder nicht. 
+10. Erstelle im nächsten Schritt der Pipeline erneut eine Variable `termin_eingehalten_01` genauso wie du das vorher bereits einmal gemacht hast. Erstelle ausserdem eine Variable `niederschlag_01` die anzeigt, ob es Niederschlag gab oder nicht. 
 
 ```{r, echo = TRUE, eval = FALSE}
 # Verbinde Datensätze

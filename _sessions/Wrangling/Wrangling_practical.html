@@ -14,13 +14,13 @@
 
 <title>Wrangling</title>
 
-<script src="Wrangling_practical_files/header-attrs/header-attrs.js"></script>
-<script src="Wrangling_practical_files/jquery/jquery-3.6.0.min.js"></script>
+<script src="Wrangling_practical_files/header-attrs-2.25/header-attrs.js"></script>
+<script src="Wrangling_practical_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="Wrangling_practical_files/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<script src="Wrangling_practical_files/bootstrap/js/bootstrap.min.js"></script>
-<script src="Wrangling_practical_files/bootstrap/shim/html5shiv.min.js"></script>
-<script src="Wrangling_practical_files/bootstrap/shim/respond.min.js"></script>
+<link href="Wrangling_practical_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="Wrangling_practical_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="Wrangling_practical_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="Wrangling_practical_files/bootstrap-3.3.5/shim/respond.min.js"></script>
 <style>h1 {font-size: 34px;}
        h1.title {font-size: 38px;}
        h2 {font-size: 30px;}
@@ -30,9 +30,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="Wrangling_practical_files/navigation/tabsets.js"></script>
-<link href="Wrangling_practical_files/highlightjs/default.css" rel="stylesheet" />
-<script src="Wrangling_practical_files/highlightjs/highlight.js"></script>
+<script src="Wrangling_practical_files/navigation-1.1/tabsets.js"></script>
+<link href="Wrangling_practical_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="Wrangling_practical_files/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -242,8 +242,9 @@ die Daten zu bekommen.</p></li>
 </ol>
 <pre class="r"><code># Zeige Spaltennamen
 names(XXX)</code></pre>
-<pre><code> [1] &quot;PatientId&quot;      &quot;AppointmentID&quot;  &quot;Gender&quot;         &quot;ScheduledDay&quot;   &quot;AppointmentDay&quot; &quot;Age&quot;           
- [7] &quot;Neighbourhood&quot;  &quot;Hypertension&quot;   &quot;Diabetes&quot;       &quot;Alcoholism&quot;     &quot;Handicap&quot;       &quot;SMS_received&quot;  
+<pre><code> [1] &quot;PatientId&quot;      &quot;AppointmentID&quot;  &quot;Gender&quot;         &quot;ScheduledDay&quot;  
+ [5] &quot;AppointmentDay&quot; &quot;Age&quot;            &quot;Neighbourhood&quot;  &quot;Hypertension&quot;  
+ [9] &quot;Diabetes&quot;       &quot;Alcoholism&quot;     &quot;Handicap&quot;       &quot;SMS_received&quot;  
 [13] &quot;NoShow&quot;        </code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Eine der Spalten hat aktuell den namen <code>Age</code>. Verwende
@@ -258,8 +259,9 @@ appointments &lt;- appointments %&gt;%
 <li>Verwende nochmals <code>names()</code> um dir die Namen anzeigen zu
 lassen. Hat sich der Name geändert?</li>
 </ol>
-<pre><code> [1] &quot;PatientId&quot;      &quot;AppointmentID&quot;  &quot;Gender&quot;         &quot;ScheduledDay&quot;   &quot;AppointmentDay&quot; &quot;alter_jahre&quot;   
- [7] &quot;Neighbourhood&quot;  &quot;Hypertension&quot;   &quot;Diabetes&quot;       &quot;Alcoholism&quot;     &quot;Handicap&quot;       &quot;SMS_received&quot;  
+<pre><code> [1] &quot;PatientId&quot;      &quot;AppointmentID&quot;  &quot;Gender&quot;         &quot;ScheduledDay&quot;  
+ [5] &quot;AppointmentDay&quot; &quot;alter_jahre&quot;    &quot;Neighbourhood&quot;  &quot;Hypertension&quot;  
+ [9] &quot;Diabetes&quot;       &quot;Alcoholism&quot;     &quot;Handicap&quot;       &quot;SMS_received&quot;  
 [13] &quot;NoShow&quot;        </code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Ergänze nun den Code unten, um alle Variablennamen ins Deutsche zu
@@ -533,7 +535,7 @@ appointments_weather &lt;- appointments %&gt;%
 <li><p>Printe <code>appointments_weather</code>. Ist alles in
 Ordnung?</p></li>
 <li><p>Erstelle im nächsten Schritt der Pipeline erneut eine Variable
-<code>termin_eingelten_01</code> genauso wie du das vorher bereits
+<code>termin_eingehalten_01</code> genauso wie du das vorher bereits
 einmal gemacht hast. Erstelle ausserdem eine Variable
 <code>niederschlag_01</code> die anzeigt, ob es Niederschlag gab oder
 nicht.</p></li>
@@ -662,254 +664,113 @@ in <code>appointments.csv</code></td>
 <h4>appointments.csv</h4>
 <p><em>Erste 5 Zeilen von appointments.csv</em></p>
 <table>
+<colgroup>
+<col width="6%" />
+<col width="9%" />
+<col width="4%" />
+<col width="13%" />
+<col width="10%" />
+<col width="2%" />
+<col width="12%" />
+<col width="8%" />
+<col width="6%" />
+<col width="7%" />
+<col width="6%" />
+<col width="8%" />
+<col width="4%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:right;">
-PatientId
-</th>
-<th style="text-align:right;">
-AppointmentID
-</th>
-<th style="text-align:left;">
-Gender
-</th>
-<th style="text-align:left;">
-ScheduledDay
-</th>
-<th style="text-align:left;">
-AppointmentDay
-</th>
-<th style="text-align:right;">
-Age
-</th>
-<th style="text-align:left;">
-Neighbourhood
-</th>
-<th style="text-align:left;">
-Hypertension
-</th>
-<th style="text-align:left;">
-Diabetes
-</th>
-<th style="text-align:left;">
-Alcoholism
-</th>
-<th style="text-align:right;">
-Handicap
-</th>
-<th style="text-align:left;">
-SMS_received
-</th>
-<th style="text-align:left;">
-NoShow
-</th>
+<tr class="header">
+<th align="right">PatientId</th>
+<th align="right">AppointmentID</th>
+<th align="left">Gender</th>
+<th align="left">ScheduledDay</th>
+<th align="left">AppointmentDay</th>
+<th align="right">Age</th>
+<th align="left">Neighbourhood</th>
+<th align="left">Hypertension</th>
+<th align="left">Diabetes</th>
+<th align="left">Alcoholism</th>
+<th align="right">Handicap</th>
+<th align="left">SMS_received</th>
+<th align="left">NoShow</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-2.99e+13
-</td>
-<td style="text-align:right;">
-5642903
-</td>
-<td style="text-align:left;">
-F
-</td>
-<td style="text-align:left;">
-2016-04-29 18:38:08
-</td>
-<td style="text-align:left;">
-2016-04-29
-</td>
-<td style="text-align:right;">
-62
-</td>
-<td style="text-align:left;">
-JARDIM DA PENHA
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-No
-</td>
+<tr class="odd">
+<td align="right">2.99e+13</td>
+<td align="right">5642903</td>
+<td align="left">F</td>
+<td align="left">2016-04-29 18:38:08</td>
+<td align="left">2016-04-29</td>
+<td align="right">62</td>
+<td align="left">JARDIM DA PENHA</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="right">0</td>
+<td align="left">FALSE</td>
+<td align="left">No</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5.59e+14
-</td>
-<td style="text-align:right;">
-5642503
-</td>
-<td style="text-align:left;">
-M
-</td>
-<td style="text-align:left;">
-2016-04-29 16:08:27
-</td>
-<td style="text-align:left;">
-2016-04-29
-</td>
-<td style="text-align:right;">
-56
-</td>
-<td style="text-align:left;">
-JARDIM DA PENHA
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-No
-</td>
+<tr class="even">
+<td align="right">5.59e+14</td>
+<td align="right">5642503</td>
+<td align="left">M</td>
+<td align="left">2016-04-29 16:08:27</td>
+<td align="left">2016-04-29</td>
+<td align="right">56</td>
+<td align="left">JARDIM DA PENHA</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="right">0</td>
+<td align="left">FALSE</td>
+<td align="left">No</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4.26e+12
-</td>
-<td style="text-align:right;">
-5642549
-</td>
-<td style="text-align:left;">
-F
-</td>
-<td style="text-align:left;">
-2016-04-29 16:19:04
-</td>
-<td style="text-align:left;">
-2016-04-29
-</td>
-<td style="text-align:right;">
-62
-</td>
-<td style="text-align:left;">
-MATA DA PRAIA
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-No
-</td>
+<tr class="odd">
+<td align="right">4.26e+12</td>
+<td align="right">5642549</td>
+<td align="left">F</td>
+<td align="left">2016-04-29 16:19:04</td>
+<td align="left">2016-04-29</td>
+<td align="right">62</td>
+<td align="left">MATA DA PRAIA</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="right">0</td>
+<td align="left">FALSE</td>
+<td align="left">No</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-8.68e+11
-</td>
-<td style="text-align:right;">
-5642828
-</td>
-<td style="text-align:left;">
-F
-</td>
-<td style="text-align:left;">
-2016-04-29 17:29:31
-</td>
-<td style="text-align:left;">
-2016-04-29
-</td>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:left;">
-PONTAL DE CAMBURI
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-No
-</td>
+<tr class="even">
+<td align="right">8.68e+11</td>
+<td align="right">5642828</td>
+<td align="left">F</td>
+<td align="left">2016-04-29 17:29:31</td>
+<td align="left">2016-04-29</td>
+<td align="right">8</td>
+<td align="left">PONTAL DE CAMBURI</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="right">0</td>
+<td align="left">FALSE</td>
+<td align="left">No</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-8.84e+12
-</td>
-<td style="text-align:right;">
-5642494
-</td>
-<td style="text-align:left;">
-F
-</td>
-<td style="text-align:left;">
-2016-04-29 16:07:23
-</td>
-<td style="text-align:left;">
-2016-04-29
-</td>
-<td style="text-align:right;">
-56
-</td>
-<td style="text-align:left;">
-JARDIM DA PENHA
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-No
-</td>
+<tr class="odd">
+<td align="right">8.84e+12</td>
+<td align="right">5642494</td>
+<td align="left">F</td>
+<td align="left">2016-04-29 16:07:23</td>
+<td align="left">2016-04-29</td>
+<td align="right">56</td>
+<td align="left">JARDIM DA PENHA</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="right">0</td>
+<td align="left">FALSE</td>
+<td align="left">No</td>
 </tr>
 </tbody>
 </table>
@@ -981,199 +842,79 @@ No
 <p><em>Erste 5 Zeilen von weather.csv</em></p>
 <table>
 <thead>
-<tr>
-<th style="text-align:right;">
-LON
-</th>
-<th style="text-align:right;">
-LAT
-</th>
-<th style="text-align:right;">
-YEAR
-</th>
-<th style="text-align:right;">
-MM
-</th>
-<th style="text-align:right;">
-DD
-</th>
-<th style="text-align:right;">
-DOY
-</th>
-<th style="text-align:left;">
-YYYYMMDD
-</th>
-<th style="text-align:right;">
-RH2M
-</th>
-<th style="text-align:right;">
-T2M
-</th>
-<th style="text-align:right;">
-PRECTOT
-</th>
+<tr class="header">
+<th align="right">LON</th>
+<th align="right">LAT</th>
+<th align="right">YEAR</th>
+<th align="right">MM</th>
+<th align="right">DD</th>
+<th align="right">DOY</th>
+<th align="left">YYYYMMDD</th>
+<th align="right">RH2M</th>
+<th align="right">T2M</th>
+<th align="right">PRECTOT</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-20.3
-</td>
-<td style="text-align:right;">
-40.3
-</td>
-<td style="text-align:right;">
-2016
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-29
-</td>
-<td style="text-align:right;">
-120
-</td>
-<td style="text-align:left;">
-2016-04-29
-</td>
-<td style="text-align:right;">
-86.6
-</td>
-<td style="text-align:right;">
-11.57
-</td>
-<td style="text-align:right;">
-6.18
-</td>
+<tr class="odd">
+<td align="right">20.3</td>
+<td align="right">40.3</td>
+<td align="right">2016</td>
+<td align="right">4</td>
+<td align="right">29</td>
+<td align="right">120</td>
+<td align="left">2016-04-29</td>
+<td align="right">86.6</td>
+<td align="right">11.57</td>
+<td align="right">6.18</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-20.3
-</td>
-<td style="text-align:right;">
-40.3
-</td>
-<td style="text-align:right;">
-2016
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-30
-</td>
-<td style="text-align:right;">
-121
-</td>
-<td style="text-align:left;">
-2016-04-30
-</td>
-<td style="text-align:right;">
-73.5
-</td>
-<td style="text-align:right;">
-14.02
-</td>
-<td style="text-align:right;">
-0.04
-</td>
+<tr class="even">
+<td align="right">20.3</td>
+<td align="right">40.3</td>
+<td align="right">2016</td>
+<td align="right">4</td>
+<td align="right">30</td>
+<td align="right">121</td>
+<td align="left">2016-04-30</td>
+<td align="right">73.5</td>
+<td align="right">14.02</td>
+<td align="right">0.04</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-20.3
-</td>
-<td style="text-align:right;">
-40.3
-</td>
-<td style="text-align:right;">
-2016
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-122
-</td>
-<td style="text-align:left;">
-2016-05-01
-</td>
-<td style="text-align:right;">
-75.9
-</td>
-<td style="text-align:right;">
-12.98
-</td>
-<td style="text-align:right;">
-4.48
-</td>
+<tr class="odd">
+<td align="right">20.3</td>
+<td align="right">40.3</td>
+<td align="right">2016</td>
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">122</td>
+<td align="left">2016-05-01</td>
+<td align="right">75.9</td>
+<td align="right">12.98</td>
+<td align="right">4.48</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-20.3
-</td>
-<td style="text-align:right;">
-40.3
-</td>
-<td style="text-align:right;">
-2016
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-123
-</td>
-<td style="text-align:left;">
-2016-05-02
-</td>
-<td style="text-align:right;">
-84.7
-</td>
-<td style="text-align:right;">
-11.41
-</td>
-<td style="text-align:right;">
-22.99
-</td>
+<tr class="even">
+<td align="right">20.3</td>
+<td align="right">40.3</td>
+<td align="right">2016</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">123</td>
+<td align="left">2016-05-02</td>
+<td align="right">84.7</td>
+<td align="right">11.41</td>
+<td align="right">22.99</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-20.3
-</td>
-<td style="text-align:right;">
-40.3
-</td>
-<td style="text-align:right;">
-2016
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-124
-</td>
-<td style="text-align:left;">
-2016-05-03
-</td>
-<td style="text-align:right;">
-84.6
-</td>
-<td style="text-align:right;">
-8.69
-</td>
-<td style="text-align:right;">
-5.81
-</td>
+<tr class="odd">
+<td align="right">20.3</td>
+<td align="right">40.3</td>
+<td align="right">2016</td>
+<td align="right">5</td>
+<td align="right">3</td>
+<td align="right">124</td>
+<td align="left">2016-05-03</td>
+<td align="right">84.6</td>
+<td align="right">8.69</td>
+<td align="right">5.81</td>
 </tr>
 </tbody>
 </table>
