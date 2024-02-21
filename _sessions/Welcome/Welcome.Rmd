@@ -28,7 +28,9 @@ source("../baselink.R")
 <br><br><br><br><br>
 #  Agenda und Materialien
 
-Klicke auf <high>"Start Datascience mit R"</high> auf Ilias!
+Klicke auf <high><a href = "https://rds-fs2024.netlify.app/">"Start Datascience mit R"</a></high> auf Ilias!<br>
+
+<a href = "https://rds-fs2024.netlify.app/">https://rds-fs2024.netlify.app</a>
 
 ]
 
