@@ -19,7 +19,7 @@ source("_sessions/baselink.R")
 |:--:|:---:|:-:|:--:|
 |21.02.| Willkommen! | [slides](_sessions/Welcome/Welcome.html) | | 
 |      | Einführung R | [slides](_sessions/IntroToR/IntroToR.html) | [source](_sessions/IntroToR/IntroToR_interactive.R) |
-|      | Data | [slides](_sessions/Data/Data.html) | [practical1](_sessions/Data/Data_practical.html)<!--, [solutions](_sessions/Data/Data_practical_solutions.html)-->|
+|      | Data | [slides](_sessions/Data/Data.html) | [practical1](_sessions/Data/Data_practical.html), [solutions](_sessions/Data/Data_practical_solutions.html)|
 || | | | 
 |28.02.| Recap | | | 
 || Wrangling I | [slides](_sessions/Wrangling/Wrangling.html)|[practical2](_sessions/Wrangling/Wrangling_practical.html)<!--, [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)-->|  
