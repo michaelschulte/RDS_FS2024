@@ -359,7 +359,7 @@ patienten %>%
   <li class="m1"><span><high>=</high> Zuweisung (siehe Assignmen Operator!)</span></li>
   <li class="m2"><span><high>==</high> 'ist gleich' logischer Test -> TRUE, FALSE  </span></li>
   <li class="m3"><span><high>``<, <=``</high> kleiner, kleiner gleich -> TRUE, FALSE</span></li></span></li>
-  <li class="m5"><span><high>``>, >=``</high> grösser, grösser gleich -> eTRUE, FALSE</span></li>
+  <li class="m5"><span><high>``>, >=``</high> grösser, grösser gleich -> TRUE, FALSE</span></li>
   <li class="m6"><span><high>&</high> Logisches UND</span></li>
   <li class="m7"><span><high>|</high> Logisches ODER<span></li>
 </ul>
