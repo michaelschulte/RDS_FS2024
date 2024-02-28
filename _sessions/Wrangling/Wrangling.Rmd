@@ -771,6 +771,41 @@ patienten_ergebnisse %>%
 ]
 
 
+---
+
+# `pull()`
+
+.pull-left4[
+
+```{r, eval = F}
+DATEN %>%
+  group_by(GRUPPEN_VAR) %>%
+  summarise(
+    NAME = SUMMARY_FUN(VAR),
+  ) %>%
+  pull(NAME)
+```
+
+
+]
+
+.pull-right5[
+
+```{r}
+basel %>%
+  
+  # Gruppiere nach Geschlecht
+  group_by(geschlecht) %>%
+  
+  # Berechne Statistiken
+  summarise(N = n()) %>%
+  
+  # Extrahiere Vektor
+  pull(N)
+  
+```
+
+]
 
 ---
 

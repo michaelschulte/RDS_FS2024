@@ -999,6 +999,46 @@ patienten_ergebnisse %&gt;%
 ]
 
 
+---
+
+# `pull()`
+
+.pull-left4[
+
+
+```r
+DATEN %&gt;%
+  group_by(GRUPPEN_VAR) %&gt;%
+  summarise(
+    NAME = SUMMARY_FUN(VAR),
+  ) %&gt;%
+  pull(NAME)
+```
+
+
+]
+
+.pull-right5[
+
+
+```r
+basel %&gt;%
+  
+  # Gruppiere nach Geschlecht
+  group_by(geschlecht) %&gt;%
+  
+  # Berechne Statistiken
+  summarise(N = n()) %&gt;%
+  
+  # Extrahiere Vektor
+  pull(N)
+```
+
+```
+## [1] 5000 5000
+```
+
+]
 
 ---
 
