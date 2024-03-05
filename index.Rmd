@@ -22,8 +22,8 @@ source("_sessions/baselink.R")
 |      | Data | [slides](_sessions/Data/Data.html) | [practical1](_sessions/Data/Data_practical.html), [solutions](_sessions/Data/Data_practical_solutions.html)|
 || | | | 
 |28.02.| Recap | | | 
-|| Wrangling I | [slides](_sessions/Wrangling/Wrangling.html)|[practical2](_sessions/Wrangling/Wrangling_practical.html)<!--, [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)-->|  
-|      | Wrangling II | [slides](_sessions/WranglingII/WranglingII.html) | [practical3](_sessions/WranglingII/WranglingII_practical.html)<!--, [solutions](_sessions/WranglingII/WranglingII_practical_solutions.html)-->|
+|| Wrangling I | [slides](_sessions/Wrangling/Wrangling.html)|[practical2](_sessions/Wrangling/Wrangling_practical.html), [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)|  
+|      | Wrangling II | [slides](_sessions/WranglingII/WranglingII.html) | [practical3](_sessions/WranglingII/WranglingII_practical.html), [solutions](_sessions/WranglingII/WranglingII_practical_solutions.html)|
 || | | | 
 |06.03.| Recap | | | 
 || Plotting I | [slides](_sessions/PlottingI/PlottingI.html) | [practical4](_sessions/PlottingI/PlottingI_practicaI.html)<!--, [solutions](_sessions/PlottingI/PlottingI_practicaI_solutions.html)-->
