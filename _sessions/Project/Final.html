@@ -14,13 +14,13 @@
 
 <title>Finales Projekt</title>
 
-<script src="Final_files/header-attrs/header-attrs.js"></script>
-<script src="Final_files/jquery/jquery-3.6.0.min.js"></script>
+<script src="Final_files/header-attrs-2.25/header-attrs.js"></script>
+<script src="Final_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="Final_files/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<script src="Final_files/bootstrap/js/bootstrap.min.js"></script>
-<script src="Final_files/bootstrap/shim/html5shiv.min.js"></script>
-<script src="Final_files/bootstrap/shim/respond.min.js"></script>
+<link href="Final_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="Final_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="Final_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="Final_files/bootstrap-3.3.5/shim/respond.min.js"></script>
 <style>h1 {font-size: 34px;}
        h1.title {font-size: 38px;}
        h2 {font-size: 30px;}
@@ -30,9 +30,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="Final_files/navigation/tabsets.js"></script>
-<link href="Final_files/highlightjs/default.css" rel="stylesheet" />
-<script src="Final_files/highlightjs/highlight.js"></script>
+<script src="Final_files/navigation-1.1/tabsets.js"></script>
+<link href="Final_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="Final_files/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -211,7 +211,7 @@ Beobachtungszeitraum?</li>
 <li>Fragestellung abgeben (Frage + grobe Skizze wie du die Frage
 beantworten willst, via email an:
 <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a>
-abgeben (<strong>28.04.22</strong>, 12.00 Uhr (high noon))</li>
+abgeben (<strong>28.03.24</strong>, 12.00 Uhr (high noon))</li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
 <li><strong>Fragestellung beantworten</strong></li>
@@ -226,10 +226,11 @@ abgeben (<strong>28.04.22</strong>, 12.00 Uhr (high noon))</li>
 <li><strong>Kommunizieren</strong></li>
 </ol>
 <ul>
-<li>Kurze R-Markdown Präsentation erstellen, in der die Daten erklärt,
-die Fage präsentiert und dann die Antwort(en) erläutert werden.</li>
-<li>Präsentation im Kurs vorstellen (<strong>27.05.22</strong>)</li>
-<li>Code + Markdown Präsentation abgeben (<strong>26.05.22</strong>,
+<li>Kurze R-Markdown Präsentation (max 10 Slides)erstellen, in der die
+Daten erklärt, die Fage präsentiert und dann die Antwort(en) erläutert
+werden.</li>
+<li>Präsentation im Kurs vorstellen (<strong>10.04.24</strong>)</li>
+<li>Code + Markdown Präsentation abgeben (<strong>09.04.24</strong>,
 high noon)</li>
 </ul>
 </div>
@@ -290,7 +291,7 @@ Beobachtungszeitraum?</p></li>
 <li><p>Fragestellung abgeben (Frage + grobe Skizze wie du die Frage
 beantworten willst, via email an:
 <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a>
-abgeben (<strong>28.04.22</strong>, 12.00 Uhr (high noon))</p></li>
+abgeben (<strong>28.03.24</strong>, 12.00 Uhr (high noon))</p></li>
 </ol>
 </div>
 <div id="e---fragestellung-beantworten" class="section level3">
@@ -321,9 +322,10 @@ deskriptive Statistiken, Grafiken)</li>
 <li>einen Slide: ‘Wish I knew this before!’</li>
 </ul>
 <ol start="4" style="list-style-type: decimal">
-<li><p><em>Maximal Anzahl Slides 12!</em></p></li>
-<li><p>Abgabe via regulärem Practicals
-<a href = 'https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb'>link</a></p></li>
+<li><p><em>Maximal Anzahl Slides 10!</em></p></li>
+<li><p>Abgabe via regulärem
+<a href = 'https://www.dropbox.com/request/H8dN3B8vm81zifcTjovP'>Practicals
+Upload Link</a>!</p></li>
 </ol>
 </div>
 </div>
@@ -374,109 +376,49 @@ in verschiedenen amerikanischen Staaten</td>
 <p><em>Erste 5 Zeilen von prices.csv</em></p>
 <table>
 <thead>
-<tr>
-<th style="text-align:right;">
-…1
-</th>
-<th style="text-align:left;">
-Date
-</th>
-<th style="text-align:right;">
-AveragePrice
-</th>
-<th style="text-align:left;">
-type
-</th>
-<th style="text-align:left;">
-region
-</th>
+<tr class="header">
+<th align="right">…1</th>
+<th align="left">Date</th>
+<th align="right">AveragePrice</th>
+<th align="left">type</th>
+<th align="left">region</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-27.12.15
-</td>
-<td style="text-align:right;">
-1.33
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
+<tr class="odd">
+<td align="right">0</td>
+<td align="left">27.12.15</td>
+<td align="right">1.33</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-20.12.15
-</td>
-<td style="text-align:right;">
-1.35
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
+<tr class="even">
+<td align="right">1</td>
+<td align="left">20.12.15</td>
+<td align="right">1.35</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-13.12.15
-</td>
-<td style="text-align:right;">
-0.93
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">13.12.15</td>
+<td align="right">0.93</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-06.12.15
-</td>
-<td style="text-align:right;">
-1.08
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">06.12.15</td>
+<td align="right">1.08</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-29.11.15
-</td>
-<td style="text-align:right;">
-1.28
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">29.11.15</td>
+<td align="right">1.28</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
 </tr>
 </tbody>
 </table>
@@ -515,200 +457,92 @@ Albany
 <h4>sales.csv</h4>
 <p><em>Erste 5 Zeilen von sales.csv</em></p>
 <table>
+<colgroup>
+<col width="2%" />
+<col width="7%" />
+<col width="9%" />
+<col width="9%" />
+<col width="10%" />
+<col width="11%" />
+<col width="5%" />
+<col width="16%" />
+<col width="12%" />
+<col width="15%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:right;">
-X1
-</th>
-<th style="text-align:left;">
-Date
-</th>
-<th style="text-align:right;">
-Small Bags
-</th>
-<th style="text-align:right;">
-Large Bags
-</th>
-<th style="text-align:right;">
-XLarge Bags
-</th>
-<th style="text-align:left;">
-type
-</th>
-<th style="text-align:left;">
-region
-</th>
-<th style="text-align:left;">
-SmallMediumAvocado
-</th>
-<th style="text-align:left;">
-LargeAvocado
-</th>
-<th style="text-align:left;">
-ExtraLargeAvocado
-</th>
+<tr class="header">
+<th align="right">X1</th>
+<th align="left">Date</th>
+<th align="right">Small Bags</th>
+<th align="right">Large Bags</th>
+<th align="right">XLarge Bags</th>
+<th align="left">type</th>
+<th align="left">region</th>
+<th align="left">SmallMediumAvocado</th>
+<th align="left">LargeAvocado</th>
+<th align="left">ExtraLargeAvocado</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-27.12.15
-</td>
-<td style="text-align:right;">
-8604
-</td>
-<td style="text-align:right;">
-93.2
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
-<td style="text-align:left;">
-4046_1036.74
-</td>
-<td style="text-align:left;">
-4225_54454.85
-</td>
-<td style="text-align:left;">
-4770_48.16
-</td>
+<tr class="odd">
+<td align="right">0</td>
+<td align="left">27.12.15</td>
+<td align="right">8604</td>
+<td align="right">93.2</td>
+<td align="right">0</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
+<td align="left">4046_1036.74</td>
+<td align="left">4225_54454.85</td>
+<td align="left">4770_48.16</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-20.12.15
-</td>
-<td style="text-align:right;">
-9408
-</td>
-<td style="text-align:right;">
-97.5
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
-<td style="text-align:left;">
-4046_674.28
-</td>
-<td style="text-align:left;">
-4225_44638.81
-</td>
-<td style="text-align:left;">
-4770_58.33
-</td>
+<tr class="even">
+<td align="right">1</td>
+<td align="left">20.12.15</td>
+<td align="right">9408</td>
+<td align="right">97.5</td>
+<td align="right">0</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
+<td align="left">4046_674.28</td>
+<td align="left">4225_44638.81</td>
+<td align="left">4770_58.33</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-13.12.15
-</td>
-<td style="text-align:right;">
-8042
-</td>
-<td style="text-align:right;">
-103.1
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
-<td style="text-align:left;">
-4046_794.7
-</td>
-<td style="text-align:left;">
-4225_109149.67
-</td>
-<td style="text-align:left;">
-4770_130.5
-</td>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">13.12.15</td>
+<td align="right">8042</td>
+<td align="right">103.1</td>
+<td align="right">0</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
+<td align="left">4046_794.7</td>
+<td align="left">4225_109149.67</td>
+<td align="left">4770_130.5</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-06.12.15
-</td>
-<td style="text-align:right;">
-5677
-</td>
-<td style="text-align:right;">
-133.8
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
-<td style="text-align:left;">
-4046_1132
-</td>
-<td style="text-align:left;">
-4225_71976.41
-</td>
-<td style="text-align:left;">
-4770_72.58
-</td>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">06.12.15</td>
+<td align="right">5677</td>
+<td align="right">133.8</td>
+<td align="right">0</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
+<td align="left">4046_1132</td>
+<td align="left">4225_71976.41</td>
+<td align="left">4770_72.58</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-29.11.15
-</td>
-<td style="text-align:right;">
-5986
-</td>
-<td style="text-align:right;">
-197.7
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-conventional
-</td>
-<td style="text-align:left;">
-Albany
-</td>
-<td style="text-align:left;">
-4046_941.48
-</td>
-<td style="text-align:left;">
-4225_43838.39
-</td>
-<td style="text-align:left;">
-4770_75.78
-</td>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">29.11.15</td>
+<td align="right">5986</td>
+<td align="right">197.7</td>
+<td align="right">0</td>
+<td align="left">conventional</td>
+<td align="left">Albany</td>
+<td align="left">4046_941.48</td>
+<td align="left">4225_43838.39</td>
+<td align="left">4770_75.78</td>
 </tr>
 </tbody>
 </table>

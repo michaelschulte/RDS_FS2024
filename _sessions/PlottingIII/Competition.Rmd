@@ -47,7 +47,7 @@ Der Competition endet in...
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("April 8, 2022 15:50:00").getTime();
+var countDownDate = new Date("March 13, 2024 15:50:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -88,26 +88,13 @@ Christoph Brutschin hatte keine gute Erklärung für die Veränderung, aber er w
 
 ### A - Vorbereitung
 
-1. Öffne dein `TheRBootcamp` R project. Es sollte die Ordner `1_Data` und `2_Code` enthalten. Stelle sicher, dass du alle Datensätze, welche im `Datensätze` Tab aufgelisted sind, in deinem `1_Data` Ordner hast. 
+1. Öffne dein `Datascience mit R` Projekt. Es sollte die Ordner `1_Data` und `2_Code` enthalten. Stelle sicher, dass du alle Datensätze, welche im `Datensätze` Tab aufgelisted sind, in deinem `1_Data` Ordner hast. 
 
 2. Öffne ein neues R Skript. Schreibe deinen Namen, das Datum und "Wettbewerb" als Kommentare an den Anfang des Skripts.
 
-3. Speichere das neue Skript unter dem Namen `Gruppenname_Wettbewerb.R` im `2_Code` Ordner.
+3. Speichere das neue Skript unter dem Namen `Name_Wettbewerb.R` im `2_Code` Ordner.
 
 4. Lade das `tidyverse` Paket und alle weiteren Pakete, die du verwenden möchtest.
-
-```{r, eval = FALSE, echo = FALSE}
-## NAME
-## DATE
-## Modeling competition
-
-library(tidyverse)
-library(caret)
-```
-
-```{r, message = FALSE, warning = FALSE, echo = FALSE, eval = TRUE}
-library(tidyverse)
-```
 
 5. Lade die beiden Datensätze `Tourismus.csv` und `Europa.csv`.
 
@@ -119,13 +106,13 @@ library(tidyverse)
 
 3. Du nimmst am Wettbewerb teil indem du deine beste Graphik im `.png` Format und das zugehörige R Script einreichst.
 
-4. Du hast (ie die Gruppe hat) einen Telefonjoker: Ihr könnt mich **einmal** konsultieren und um Hilfe bitten.
+4. Du hast einen Telefonjoker: Du kannst mich **einmal** konsultieren und um Hilfe bitten.
 
-5. Vor dem Einreichen, speichere deine Graphik mittels `ggsave()` (siehe code) und benennt die Datei mit eurem *Gruppennamen*. Benutzt euren *Gruppennamen* ebenfalls im Namen der `.R` Skriptdatei (siehe oben). 
+5. Vor dem Einreichen, speichere deine Graphik mittels `ggsave()` (siehe code) und benennt die Datei mit deinem *Namen*. Benutzt deinen *Namen* ebenfalls im Namen der `.R` Skriptdatei (siehe oben). 
 
 ```{r}
 # speichere plot
-ggsave(filename = "plot_GRUPPENNAME.png",
+ggsave(filename = "NAME_plot.png",
        plot = mein_plot,
        device = "png",       
        units = 'in',
@@ -136,9 +123,9 @@ ggsave(filename = "plot_GRUPPENNAME.png",
 
 6. Reiche deinen Beitrag über diesen Link ein: 
 
-- [**Graphik + Skript einreichen**](https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb)
+- [**Graphik + Skript einreichen**](https://www.dropbox.com/request/H8dN3B8vm81zifcTjovP)
 
-7. Jeder Beitrag wird duch eine Jury beurteilt, diese besteht aus den KursteilnehmerInnen. Der Beitrag mit dem höchsten Punktemittel gewinnt.   
+7. Jeder Beitrag wird durch eine Jury beurteilt, diese besteht aus den KursteilnehmerInnen. Der Beitrag mit dem höchsten Punktemittel gewinnt.   
 
 8. Bitte deinen eigenen Beitrag nicht bewerten!
 
@@ -146,7 +133,7 @@ Wichtig: Entscheidend für den Erfolg ist nicht nur die Ästhetik der Graphik, s
 
 ## Rating
 
-Bitte rated die einzelnen Beiträge über diesen [**Link**](https://forms.gle/d2csMcUNSp2sz6PU9)
+Bitte rated die einzelnen Beiträge über diesen [**Link**](https://formr.imucb.ch/RDSCompetition)
 
 ## Beispiel
 

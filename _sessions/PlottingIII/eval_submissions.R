@@ -1,58 +1,51 @@
 # Competition Analysis
 # MSM
-# Oct 2020
+# Mar 2024
 
 # load packages
-library(googlesheets4)
 library(tidyverse)
 library(patchwork)
 library(lubridate)
+library(formr)
 
-caption <- 'Datascience mit R 2022'
+caption <- 'Datascience mit R 2024'
   
 
 # read in data 
-raw <- read_sheet(ss = '1qODIQcqM8VrWeEyGl2bCfqFqRE9MBtkJyMXiksSzYVU') %>%
-  filter(!is.na(Timestamp))
 
-# generate tibble for each group ----
-graph1 <- 
-  raw %>%
-  select(2:4) %>%
-  summarise(across(where(is.numeric), ~mean(.x, na.rm = TRUE))) %>%
-  mutate(graph = 'RGo')
 
-graph2 <- 
-  raw %>%
-  select(5:7) %>%
-  summarise(across(where(is.numeric), ~mean(.x, na.rm = TRUE))) %>%
-  mutate(graph = 'Data_Pirates')
+formr_connect(email = 'michael.schulte@unibe.ch', 
+              password = 'pitzeb-0dybqo-gapkId',
+              host = 'https://formr.imucb.ch')
 
-graph3 <- 
-  raw %>%
-  select(8:10) %>%
-  summarise(across(where(is.numeric), ~mean(.x, na.rm = TRUE))) %>%
-  mutate(graph = 'U_R_QL')
+raw <- formr_raw_results('RDS', host = "https://formr.imucb.ch")%>%
+  filter(!ended == 'NA',
+         ended > ymd('2023-02-23')) %>%
+  filter(!is.na(session))
 
-graph4 <- 
-  raw %>%
-  select(11:13) %>%
-  summarise(across(where(is.numeric), ~mean(.x, na.rm = TRUE))) %>%
-  mutate(graph = 'We_R_Nerds')
-
-# bind together, make long ----
-result <- 
-bind_rows(graph1, graph2, graph3, graph4) %>%
-  rename('Ästhetik' = 'Ist die Grafik ästhetisch ansprechend?', 
-         'Überzeugend' = 'Überzeugen dich die dargestellten Datenmuster (unabhängig von der Fragestellung)?', 
-         'Relevant' = 'Findest du die dargestellten Datenmuster entscheidungsrelevant in Bezug auf die Fragestellung?') %>%
-  pivot_longer(cols = 1:3, names_to = 'Frage')
+df_raw <- 
+raw %>%
+  select(-session, -created, -modified, -ended, -expired, -starts_with('name')) %>%
+  pivot_longer(cols = starts_with('name') | starts_with('schoen')| starts_with('ueberzeugend') | starts_with('relevant') | starts_with('ueberzeugen'),
+                names_to = 'names',
+                values_to = 'values'
+               ) %>%
+  mutate(student = as.numeric(gsub(".*([0-9])$", "\\1", names))) %>%
+  mutate(names = gsub("[0-9]", "", names)) %>%
+  mutate(student = case_when(student == 1 ~ 'Joel',
+                             student == 2 ~ 'Maria',
+                             student == 3 ~ 'Olivia',
+                             student == 4 ~ 'Rafaela',
+                             student == 5 ~ 'Jan'
+                             )) %>%
+na.omit() %>%
+  mutate(values = as.numeric(values))
 
 # plot single result ----
-single <- ggplot(result, aes(Frage, value)) +
+single <- ggplot(df_raw, aes(names, values)) +
  geom_point(stat = 'identity') + 
- facet_wrap(~graph, nrow = 1) +
-  ylim(1,5) +
+ facet_wrap(~student, nrow = 1) +
+
   labs(y = 'Bewertung',
        x = 'Bereich',
        caption = caption,
@@ -61,30 +54,20 @@ single <- ggplot(result, aes(Frage, value)) +
 
 # plot overall ----
 overall_result <- 
-  result %>%
-    group_by(graph) %>%
-    summarise(overall = mean(value),
-              ci = sd(value))
+  df_raw %>%
+    group_by(names) %>%
+    summarise(overall = mean(values),
+              ci = sd(values))
   
-overall_graph <- ggplot(overall_result, aes(reorder(graph, -overall), overall)) +
+overall_graph <- ggplot(overall_result, aes(reorder(names, -overall), overall)) +
   geom_point() +
   geom_errorbar(aes(ymin=overall-ci, ymax=overall+ci), colour="black", width=.1) +
   
   labs(y = 'Bewertung Across',
-       x = 'Gruppe',
+       x = 'Studierende',
        caption = caption,
        title = 'Ergebnisse Plotting Competition') +
-  ylim(1,5) +
+  ylim(1,6) +
   theme_bw()
 # show next to each other
 overall_graph / single
-
-
-
-# Dump ----
-
-# graph4 <- 
-#   raw %>%
-#   select(11:13) %>%
-#   summarise(across(where(is.numeric), ~mean(.x, na.rm = TRUE))) %>%
-#   mutate(graph = 'R-Pandemi')

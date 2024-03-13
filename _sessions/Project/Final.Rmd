@@ -62,7 +62,7 @@ Du wirst:
 2. **Fragestellung erarbeiten**
 
 - Überleg dir eine Frage, die du mit den Daten beantworten kannst. Wie ist der Zusammenhang zwischen X und Y? Was treibt die Variable X? Gibt es eine bevorzugte Art Avocados? Verändert sich eine Variable im Beobachtungszeitraum?
-- Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (**28.04.22**, 12.00 Uhr (high noon))
+- Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (**28.03.24**, 12.00 Uhr (high noon))
 
 3. **Fragestellung beantworten**
 
@@ -73,9 +73,9 @@ Du wirst:
 
 4. **Kommunizieren**
 
-- Kurze R-Markdown Präsentation erstellen, in der die Daten erklärt, die Fage präsentiert und dann die Antwort(en) erläutert werden. 
-- Präsentation im Kurs vorstellen (**27.05.22**)
-- Code + Markdown Präsentation abgeben (**26.05.22**, high noon)
+- Kurze R-Markdown Präsentation (max 10 Slides)erstellen, in der die Daten erklärt, die Fage präsentiert und dann die Antwort(en) erläutert werden. 
+- Präsentation im Kurs vorstellen (**10.04.24**)
+- Code + Markdown Präsentation abgeben (**09.04.24**, high noon)
 
 ## Aufgaben
 
@@ -127,7 +127,7 @@ sales <- read_csv('1_Data/sales.csv')
 
 2. Fragestellung kommt auf den Slide Nummer 3.
 
-3. Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (**28.04.22**, 12.00 Uhr (high noon))
+3. Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (**28.03.24**, 12.00 Uhr (high noon))
 
 ### E - Fragestellung beantworten
 
@@ -149,9 +149,9 @@ sales <- read_csv('1_Data/sales.csv')
 - einen Slides Executive Summary
 - einen Slide: 'Wish I knew this before!'
 
-4. *Maximal Anzahl Slides 12!*
+4. *Maximal Anzahl Slides 10!*
 
-5. Abgabe via regulärem Practicals <a href = 'https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb'>link</a>
+5. Abgabe via regulärem <a href = 'https://www.dropbox.com/request/H8dN3B8vm81zifcTjovP'>Practicals Upload Link</a>!
 
 ## Datensätze
 
