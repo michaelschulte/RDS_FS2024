@@ -861,7 +861,7 @@ class: middle, center
 .pull-left3[
 
 <ul>
-  <li class="m1"><span>Youtube Emopfehlungen</span></li>
+  <li class="m1"><span>YouTube Empfehlungen</span></li>
 
 ]
 
@@ -869,7 +869,7 @@ class: middle, center
 .pull-right6[
 
 - <a href="https://www.youtube.com/watch?v=WBA04fjTVU0">Cedric Scherer</a>
-- <a href="https://www.youtube.com/@PositPBC">Alles Posit</a>
+- <a href="https://www.youtube.com/@PositPBC">Posit Talks</a>
 ]
 
 
