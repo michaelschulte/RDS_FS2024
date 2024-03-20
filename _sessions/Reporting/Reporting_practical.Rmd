@@ -314,6 +314,19 @@ knitr::include_graphics("https://github.com/therbootcamp/therbootcamp.github.io/
 
 2. Knit your document! Do you see the tabs now?
 
+### I - Setzt eure Präsenation auf!
+
+1. Geht vor wie oben - aber wählt Präsentation - HTML aus
+
+2. Erstellt folgende Slides:
+
+- einen Überblicksslide für den `avocado` Datensatz
+- einen Slide mit deskriptiven Statistiken zu den Datensätzen
+- einen Slide mit der Fragestellung
+- mehrere Slides für die Beantwortung der Fragestellung (Tabellen, deskriptive Statistiken, Grafiken)
+- einen Slides Executive Summary
+- einen Slide: ‘Wish I knew this before!’
+
 
 ## Datasets
 

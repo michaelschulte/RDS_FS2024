@@ -1,5 +1,5 @@
 ---
-title: "Final Project Feedbacl - `r params$group` quotes"
+title: "Final Project Feedback - `r params$group` quotes"
 output: pdf_document
 params:
   fullname: "Feedback"

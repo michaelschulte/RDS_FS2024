@@ -28,10 +28,11 @@ library(tidyverse)
 ---
 # Präsentationen heute
 
-- Data Pirates (Fragen: We_R_Nerds)
-- We_R_Nerds (Fragen: U_R_QL)
-- U_R_QL (Fragen: RGo)
-- RGo (Fragen: Data Pirates)
+- Joel (1. Frage: Maria)
+- Maria (Olivia)
+- Olivia (Rafaela)
+- Rafaela (Jan)
+- Jan (Joel)
 
 Anonymes [Feedback](https://forms.gle/38LagXxyH2cMHynt8)
 
@@ -39,7 +40,6 @@ Anonymes [Feedback](https://forms.gle/38LagXxyH2cMHynt8)
 class: center, middle
 
 # Hallo Tidyverse Experten!
-
 
 ---
 
