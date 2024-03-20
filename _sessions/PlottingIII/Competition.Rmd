@@ -148,8 +148,8 @@ mein_plot <- read_csv('1_Data/Tourismus.csv') %>%
              y = Dauer, 
              color = Land)) + 
   geom_point() + 
-  facet_wrap(~Erwerbsquote < 70) +
-  theme_excel()
+  facet_wrap(~ Erwerbsquote < 70) +
+  theme_linedraw()
 
 # Speichere plot als png
 ggsave(filename = 'plot_DOZENTEN.png',
