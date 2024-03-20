@@ -657,7 +657,7 @@ plt %>%  layout(showlegend = FALSE)
   <mono>1</mono> / <mono>0</mono> 
   </td>
   <td bgcolor="white">
-  Ergänze / eliminiere Intercept
+  Ergänze / eliminiere Intercept.
   </td> 
 </tr>
 <tr>
@@ -1125,7 +1125,7 @@ resid(naechte_lm)[1:5]
 .pull-left4[
 
 <ul>
-  <li class="m1"><span>Der Test vergleicht den beobachteten t-Wert mit entweder...</span></li>
+  <li class="m1"><span>Der Test vergleicht den beobachteten t-Wert entweder...</span></li>
   <ul>
     <li><span>Einseitig: t<sub>&alpha;</sub></span></li>
     <li><span>Zweiseitig: t<sub>&alpha;/2</sub></span></li>

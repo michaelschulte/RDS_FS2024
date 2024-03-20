@@ -35,7 +35,7 @@ source("_sessions/baselink.R")
 || | | | 
 |20.03.| Lineare Modelle |[slides](_sessions/LinearModelsI/LinearModelsI.html)| [practical6](_sessions/LinearModelsI/LinearModelsI_practical.html)<!--, [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)-->| |
 || Reporting | [slides](_sessions/Reporting/Reporting.html)| [practical7](_sessions/Reporting/Reporting_practical.html)<!--, [solutions](_sessions/Reporting/Reporting_practical_solutions.html)-->||
-|| Evaluation | <!--[Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=LT1PR)-->|||
+|| Evaluation | [Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=KV1F7)|||
 || | | | 
 |10.04.| Recap | | | 
 || Projektpräsentationen |<!--[Next steps](_sessions/NextSteps/NextSteps.html) -->| <!--[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://ilias.unibe.ch/goto_ilias3_unibe_file_2447103_download.html)-->| 
