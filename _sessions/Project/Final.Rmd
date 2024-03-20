@@ -73,7 +73,7 @@ Du wirst:
 
 4. **Kommunizieren**
 
-- Kurze R-Markdown Präsentation (max 10 Slides)erstellen, in der die Daten erklärt, die Fage präsentiert und dann die Antwort(en) erläutert werden. 
+- Kurze R-Markdown Präsentation (max 10 Slides) erstellen, in der die Daten erklärt, die Fage präsentiert und dann die Antwort(en) erläutert werden. 
 - Präsentation im Kurs vorstellen (**10.04.24**)
 - Code + Markdown Präsentation abgeben (**09.04.24**, high noon)
 
