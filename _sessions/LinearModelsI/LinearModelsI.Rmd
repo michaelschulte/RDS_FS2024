@@ -20,6 +20,7 @@ options(digits = 4)
 source("../baselink.R")
 # Load packages
 require(tidyverse)
+library(sjPlot)
 
 print2 <- function(x, nlines=10,...) {
    cat(head(capture.output(print(x,...)), nlines), sep="\n")}
@@ -725,7 +726,7 @@ plt %>%  layout(showlegend = FALSE)
 </tr>
 <tr>
   <td bgcolor="white">
-  <mono>summary()</mono>
+  <mono>summary(), tab_model()</mono>
   </td>
   <td bgcolor="white">
   Erhalte <high>Testergebnisse</high>.
@@ -817,7 +818,7 @@ naechte_lm <- lm(
 </tr>
 <tr>
   <td bgcolor="white">
-  <mono>summary()</mono>
+  <mono>summary(), tab_model()</mono>
   </td>
   <td bgcolor="white">
   Erhalte <high>Testergebnisse</high>.
@@ -898,7 +899,7 @@ naechte_lm
 </tr>
 <tr>
   <td bgcolor="white">
-  <mono>summary()</mono>
+  <mono>summary(), tab_model()</mono>
   </td>
   <td bgcolor="white">
   Erhalte <high>Testergebnisse</high>.
@@ -934,6 +935,90 @@ summary(naechte_lm)
 ```{r, echo = FALSE}
 # Zeige Testergebnisse
 print2(summary(naechte_lm),15)
+```
+
+]
+
+---
+
+# <mono>tab_model()</mono>
+
+.pull-left35[
+
+<font style="font-size:20px"><u>Fitting</u></p>
+
+<table style="cellspacing:0; cellpadding:0; border:none; padding-top:10px" width=100%>
+  <col width="40%">
+  <col width="60%">
+<tr>
+  <td bgcolor="white">
+    <b>Funktion</b>
+  </td>
+  <td bgcolor="white">
+    <b>Beschreibung</b>
+  </td> 
+</tr>
+<tr>
+  <td bgcolor="white">
+    <mono>lm(formula, data)</mono>
+  </td>
+  <td bgcolor="white">
+    Fitte ein <high>lineares Modell</high>.
+  </td> 
+</tr>
+</table>
+
+<font style="font-size:20px"><u>Evaluation</u></p>
+
+<table style="cellspacing:0; cellpadding:0; border:none; padding-top:10px" width=100%>
+  <col width="40%">
+  <col width="60%">
+<tr>
+  <td bgcolor="white">
+    <b>Funktion</b>
+  </td>
+  <td bgcolor="white">
+    <b>Beschreibung</b>
+  </td> 
+</tr>
+<tr>
+  <td bgcolor="white">
+  <mono>summary(), tab_model()</mono>
+  </td>
+  <td bgcolor="white">
+  Erhalte <high>Testergebnisse</high>.
+  </td> 
+</tr>
+<tr>
+  <td bgcolor="white">
+   <mono>coef(mod)</mono>   
+  </td>
+  <td bgcolor="white">
+   Erhalte <high>Koeffizienten</high>.    
+  </td> 
+</tr>
+<tr>
+  <td bgcolor="white">
+   <mono>predict(mod)</mono>, <mono>resid(mod)</mono>
+  </td>
+  <td bgcolor="white">
+    Erhalte <high>gefittete Werte</high> / <high>Residuen</high>.
+  </td> 
+</tr>
+</table>
+
+]
+
+.pull-right6[
+
+```{r, echo = TRUE, eval = F}
+# Zeige Testergebnisse
+tab_model(naechte_lm)
+```
+
+```{r, echo = FALSE}
+# Zeige Testergebnisse
+tab_model(naechte_lm)
 ```
 
 ]
@@ -983,7 +1068,7 @@ print2(summary(naechte_lm),15)
 </tr>
 <tr>
   <td bgcolor="white">
-  <mono>summary()</mono>
+  <mono>summary(), tab_model()</mono>
   </td>
   <td bgcolor="white">
   Erhalte <high>Testergebnisse</high>.

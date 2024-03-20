@@ -14,13 +14,13 @@
 
 <title>Lineare Modelle</title>
 
-<script src="LinearModelsI_practical_files/header-attrs-2.25/header-attrs.js"></script>
-<script src="LinearModelsI_practical_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="LinearModelsI_practical_solutions_files/header-attrs-2.25/header-attrs.js"></script>
+<script src="LinearModelsI_practical_solutions_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="LinearModelsI_practical_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="LinearModelsI_practical_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="LinearModelsI_practical_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="LinearModelsI_practical_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<link href="LinearModelsI_practical_solutions_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="LinearModelsI_practical_solutions_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="LinearModelsI_practical_solutions_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="LinearModelsI_practical_solutions_files/bootstrap-3.3.5/shim/respond.min.js"></script>
 <style>h1 {font-size: 34px;}
        h1.title {font-size: 38px;}
        h2 {font-size: 30px;}
@@ -30,9 +30,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="LinearModelsI_practical_files/navigation-1.1/tabsets.js"></script>
-<link href="LinearModelsI_practical_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="LinearModelsI_practical_files/highlightjs-9.12.0/highlight.js"></script>
+<script src="LinearModelsI_practical_solutions_files/navigation-1.1/tabsets.js"></script>
+<link href="LinearModelsI_practical_solutions_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="LinearModelsI_practical_solutions_files/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -218,10 +218,13 @@ Skripts.</p></li>
 <code>lineare_modelle_practical.R</code> im <code>2_Code</code>
 Ordner.</p></li>
 <li><p>Lade das Paket <code>tidyverse</code>.</p></li>
-<li><p>Verwende die <code>read_csv()</code> Funktion um
+</ol>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Verwende die <code>read_csv()</code> Funktion um
 <code>wein.csv</code> einzulesen (Falls du die Datei noch nicht auf
 deinem Computer hast, lade sie zuerst vom Menü ‘Datensätze’
-herunter.)</p></li>
+herunter.)</li>
 </ol>
 <pre class="r"><code># Lese Daten ein
 wein &lt;- read_csv(file = &quot;1_Data/wein.csv&quot;)</code></pre>
@@ -248,6 +251,7 @@ zusammen. D.h.: je mehr Zucker im Wein desto mehr Alkohol.</p></li>
 und <code>Alkohol</code> aus dem Datensatz <code>wein</code>.</p></li>
 </ol>
 <pre class="r"><code>cor.test(wein$XXX, wein$XXX)</code></pre>
+<pre class="r"><code>cor.test(wein$Restzucker, wein$Alkohol)</code></pre>
 <pre><code>
     Pearson&#39;s product-moment correlation
 
@@ -278,6 +282,7 @@ in unserem Beispieldatensatz von Vinho Verde.</p></li>
 Rot- und Weisswein (<code>Farbe</code>).</p></li>
 </ol>
 <pre class="r"><code>t.test(XXX ~ XXX, data = XXX)</code></pre>
+<pre class="r"><code>t.test(Freie_Säure ~ Farbe, data = wein)</code></pre>
 <pre><code>
     Welch Two Sample t-test
 
@@ -307,10 +312,13 @@ das Objekt <code>wein_lm</code> zu speichern.</li>
 <pre class="r"><code># Einfache Regression
 wein_lm &lt;- lm(formula = XX ~ XX,
               data = XX)</code></pre>
+<pre class="r"><code>wein_lm &lt;- lm(formula = Qualität ~ Restzucker,
+              data = wein)</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Printe das Fit-Objekt <code>wein_lm</code>. Welche Information wird
 dir angezeigt? Was sagen dir die Werte?</li>
 </ol>
+<pre class="r"><code>wein_lm</code></pre>
 <pre><code>
 Call:
 lm(formula = Qualität ~ Restzucker, data = wein)
@@ -327,6 +335,7 @@ erhalten.</li>
 </ol>
 <pre class="r"><code># Zeige Ergebnisse
 summary(XX)</code></pre>
+<pre class="r"><code>summary(wein_lm)</code></pre>
 <pre><code>
 Call:
 lm(formula = Qualität ~ Restzucker, data = wein)
@@ -386,11 +395,14 @@ entsprechendes lineares Modell zu testen und in das Objekt
 <pre class="r"><code># Multiple Regression
 wein_lm &lt;- lm(formula = XX ~ XX + XX + XX + XX,
               data = XX)</code></pre>
+<pre class="r"><code>wein_lm &lt;- lm(formula = Qualität ~ Restzucker + pH_Wert + Alkohol + Sulphate,
+              data = wein)</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Printe wiederum das Modell. Wie interpretierst du die Grössen der
 Regressionsgewichte Kannst du aus ihnen ablesen, welcher Prädiktor die
 meiste Bedeutung hat?</li>
 </ol>
+<pre class="r"><code>wein_lm</code></pre>
 <pre><code>
 Call:
 lm(formula = Qualität ~ Restzucker + pH_Wert + Alkohol + Sulphate, 
@@ -411,6 +423,8 @@ es aber nicht.</li>
 <pre class="r"><code># Multiple Regression
 lm(formula = XX ~ XX + XX + I(XX / 10) + XX,
    data = XX)</code></pre>
+<pre class="r"><code>lm(formula = Qualität ~ Restzucker + pH_Wert + I(Alkohol/10) + Sulphate,
+   data = wein)</code></pre>
 <pre><code>
 Call:
 lm(formula = Qualität ~ Restzucker + pH_Wert + I(Alkohol/10) + 
@@ -433,6 +447,7 @@ konditional zu interpretieren. Wiederum nicht leicht!</p></li>
 <li><p>Schaue dir nun die <code>summary()</code> an. Welche Effekte
 gehen in welche Richtung, welche Effekte sind signifikant?</p></li>
 </ol>
+<pre class="r"><code>summary(wein_lm)</code></pre>
 <pre><code>
 Call:
 lm(formula = Qualität ~ Restzucker + pH_Wert + Alkohol + Sulphate, 
