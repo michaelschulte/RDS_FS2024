@@ -184,11 +184,12 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 ---
 # Kursserie
 
-<img src="image/Kurse_Uberblick.png" width = "800px"></img>
+<a href = "http://schultem.pages.imucb.ch/cavd_hs2024/" target="_blank"><img src="image/CaVD2024.png" width = "800px"></a>
+
 ---
 class: center, middle
 
-# [Evaluation](https://ilias.unibe.ch/goto_ilias3_unibe_file_2447103_download.html) / Feedback
+# [Evaluation](https://scanserveruls.unibe.ch/evasys/public/html-report-online/show-report/143480264/1eed5fcd92ce2cbcfe4d1b473631dc2a686db59c6cfac1932855775a66da39896271dcf0b8032c981835a2f85fc06581871e2ad341b2) / Feedback
 
 ---
 

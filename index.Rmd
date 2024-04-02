@@ -33,12 +33,12 @@ source("_sessions/baselink.R")
 || Plotting III + Competition |[slides](_sessions/PlottingIII/PlottingIII.html)|[Competition](_sessions/PlottingIII/Competition.html)| |
 ||Intro Finales Projekt||[Avocado](_sessions/Project/Final.html)||
 || | | | 
-|20.03.| Lineare Modelle |[slides](_sessions/LinearModelsI/LinearModelsI.html)| [practical6](_sessions/LinearModelsI/LinearModelsI_practical.html)<!--, [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)-->| |
-|| Reporting | [slides](_sessions/Reporting/Reporting.html)| [practical7](_sessions/Reporting/Reporting_practical.html)<!--, [solutions](_sessions/Reporting/Reporting_practical_solutions.html)-->||
+|20.03.| Lineare Modelle |[slides](_sessions/LinearModelsI/LinearModelsI.html)| [practical6](_sessions/LinearModelsI/LinearModelsI_practical.html), [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)| |
+|| Reporting | [slides](_sessions/Reporting/Reporting.html)| [practical7](_sessions/Reporting/Reporting_practical.html), [solutions](_sessions/Reporting/Reporting_practical_solutions.html)||
 || Evaluation | [Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=KV1F7)|||
 || | | | 
 |10.04.| Recap | | | 
-|| Projektpräsentationen |<!--[Next steps](_sessions/NextSteps/NextSteps.html) -->| <!--[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://ilias.unibe.ch/goto_ilias3_unibe_file_2447103_download.html)-->| 
+|| Projektpräsentationen |<!--[Next steps](_sessions/NextSteps/NextSteps.html) -->| <!--[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://scanserveruls.unibe.ch/evasys/public/html-report-online/show-report/143480264/1eed5fcd92ce2cbcfe4d1b473631dc2a686db59c6cfac1932855775a66da39896271dcf0b8032c981835a2f85fc06581871e2ad341b2)-->| 
 || | | | 
 
 # Practicals
