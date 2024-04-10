@@ -38,7 +38,11 @@ source("_sessions/baselink.R")
 || Evaluation | [Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=KV1F7)|||
 || | | | 
 |10.04.| Recap | | | 
+<<<<<<< HEAD
 || Projektpräsentationen |<!--[Next steps](_sessions/NextSteps/NextSteps.html) -->| <!--[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://scanserveruls.unibe.ch/evasys/public/html-report-online/show-report/143480264/1eed5fcd92ce2cbcfe4d1b473631dc2a686db59c6cfac1932855775a66da39896271dcf0b8032c981835a2f85fc06581871e2ad341b2)-->| 
+=======
+|| Projektpräsentationen |[Next steps](_sessions/NextSteps/NextSteps.html) | [feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://ilias.unibe.ch/goto_ilias3_unibe_file_3049313_download.html)| 
+>>>>>>> 01095437b01c6eb008c4778545776a1c6d832783
 || | | | 
 
 # Practicals

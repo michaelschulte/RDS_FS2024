@@ -37,6 +37,14 @@ library(tidyverse)
 Anonymes [Feedback](https://forms.gle/38LagXxyH2cMHynt8)
 
 ---
+
+# Schriftliches Feedback
+
+- Zu jeder Präsentation gibt es schriftliches Feedback
+- Inkl Auswertung der Ratings der Gruppe
+- Plus finale Note
+
+---
 class: center, middle
 
 # Hallo Tidyverse Experten!
@@ -182,6 +190,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 ]
 
 ---
+<<<<<<< HEAD
 # Kursserie
 
 <a href = "http://schultem.pages.imucb.ch/cavd_hs2024/" target="_blank"><img src="image/CaVD2024.png" width = "800px"></a>
@@ -193,6 +202,8 @@ class: center, middle
 
 ---
 
+=======
+>>>>>>> 01095437b01c6eb008c4778545776a1c6d832783
 class: center, middle
 
 # Merci!
